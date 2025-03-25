@@ -160,7 +160,7 @@ export default function onboard() {
         personal_number: "9988776655",
         emergency_contact_number: "9988776600",
         email: "sophia.miller@example.com",
-        aadhar_number: "6789-3456-9012",
+        aadhar_number: "6789-3456-012",
         pan_number: "PQRS6789M",
         status: "Active",
         current_address: "101, GHI Street, City, State - 101112",
@@ -246,16 +246,28 @@ export default function onboard() {
       <div className="onboarding-head">
         <h3>Candidate Details</h3>
         <div className="onboarding-header-right">
+          <div className="onboard-search-cointainer">
+            <input
+              id="onboard-logo-focus"
+              type="text"
+              placeholder="Search..."
+              onChange={(e) => {
+                setKeyword(e.target.value);
+              }}
+            />
+            <label htmlFor="onboard-logo-focus">
+              <svg
+                className="search-logo-onboard"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+              </svg>
+            </label>
+          </div>
           <Link to={`/add-new-candidate`}>
             <div className="add-candidate-bts">Add Candidate</div>
           </Link>
-
-          <input
-            type="text"
-            onChange={(e) => {
-              setKeyword(e.target.value);
-            }}
-          />
         </div>
       </div>
 

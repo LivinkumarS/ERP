@@ -122,7 +122,9 @@ export default function bugDetailPage() {
     const index = comments.findIndex((ele) => {
       return ele.commentId === replyCommentId;
     });
-
+    if (replyCommnetText === "") {
+      return;
+    }
     setComments((prev) => {
       prev[index].replies.push({
         replyId: crypto.randomUUID(),

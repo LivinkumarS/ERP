@@ -51,9 +51,9 @@ export default function onboardTableRow({ ele, ind, handleDeleteCandidate }) {
       <td>{ele.department}</td>
       <td>
         <abbr title={ele.designation}>
-          {ele.designation.length < 15
+          {ele.designation.length < 13
             ? ele.designation
-            : ele.designation.slice(0, 12) + "..."}
+            : ele.designation.slice(0, 11) + "..."}
         </abbr>
       </td>
       <td>{ele.gender}</td>

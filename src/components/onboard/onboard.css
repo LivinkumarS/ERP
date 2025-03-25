@@ -28,6 +28,7 @@
   justify-content: end;
 }
 .add-candidate-bts {
+  min-width: 130px;
   padding: 8px 10px;
   background-image: linear-gradient(#0056b3, #405189);
   border: none;
@@ -49,8 +50,6 @@
   width: 100%;
   overflow-y: hidden;
   overflow-x: scroll;
-  scrollbar-width: thin;
-  scrollbar-color: gray transparent;
 }
 .candidate-table {
   overflow-y: visible;
@@ -163,7 +162,7 @@
 #width-relative-experience,
 #width-emp-code,
 #width-aathar {
-  min-width: 160px;
+  min-width: 165px;
 }
 #width-num {
   min-width: 80px;
@@ -202,4 +201,73 @@ td#width-edit {
 .table-row:hover > #width-num,
 .table-row:hover > #width-edit {
   background: lightcyan;
+}
+
+/* search */
+.search-logo-onboard {
+  width: 30px;
+  height: 20px;
+  fill: gray;
+  transition: fill 0.3s ease;
+  cursor: pointer;
+  padding-left: 10px;
+}
+
+.onboard-search-cointainer {
+  background: #fff;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  padding: 10px;
+  border-radius: 25px;
+  border: 2px solid lightgray;
+  min-width: 140px;
+}
+.onboard-search-cointainer:focus-within {
+  border: 2px solid gray; /* Change border color when focused */
+}
+.onboard-search-cointainer > input {
+  border: 0px;
+  width: 80%;
+}
+.onboard-search-cointainer > input:focus {
+  outline: none;
+}
+.onboard-search-cointainer > label {
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 980px) {
+  .onboarding-head > h3 {
+    width: 30%;
+  }
+  .onboarding-head {
+    justify-content: space-between;
+  }
+}
+@media (max-width: 630px) {
+  .onboarding-head {
+    flex-direction: column;
+  }
+  .onboarding-head > h3 {
+    width: 100%;
+  }
+  .onboarding-header-right {
+    width: 100%;
+    margin-top: 15px;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 425px) {
+  .onboarding-header-right {
+    flex-direction: column;
+  }
+  .add-candidate-bts {
+    width: 130px;
+  }
 }
