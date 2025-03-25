@@ -33,19 +33,19 @@ export default function onboardTableRow({ ele, ind, handleDeleteCandidate }) {
         </div>
       </td>
       <td id="width-num">{ind + 1}</td>
-      <td id="width-emp-code">{ele.employeeCode}</td>
+      <td id="width-emp-code">{ele.employee_code}</td>
       <td>
-        <abbr title={ele.firstName}>
-          {ele.firstName.length < 14
-            ? ele.firstName
-            : ele.firstName.slice(0, 11) + "..."}
+        <abbr title={ele.first_name}>
+          {ele.first_name.length < 14
+            ? ele.first_name
+            : ele.first_name.slice(0, 11) + "..."}
         </abbr>
       </td>
       <td>
-        <abbr title={ele.lastName}>
-          {ele.lastName.length < 14
-            ? ele.lastName
-            : ele.lastName.slice(0, 11) + "..."}
+        <abbr title={ele.last_name}>
+          {ele.last_name.length < 14
+            ? ele.last_name
+            : ele.last_name.slice(0, 11) + "..."}
         </abbr>
       </td>
       <td>{ele.department}</td>
@@ -56,157 +56,144 @@ export default function onboardTableRow({ ele, ind, handleDeleteCandidate }) {
             : ele.designation.slice(0, 12) + "..."}
         </abbr>
       </td>
-      <td>{ele.rollBand}</td>
       <td>{ele.gender}</td>
-      <td>{ele.dob}</td>
-      <td>{ele.joiningDate}</td>
+      <td>{ele.joining_date}</td>
       <td id="width-con-num">
-        <abbr title={ele.personalNumber}>
-          {ele.personalNumber.length < 17
-            ? ele.personalNumber
-            : ele.personalNumber.slice(0, 14) + "..."}
+        <abbr title={ele.personal_number}>
+          {ele.personal_number.length < 17
+            ? ele.personal_number
+            : ele.personal_number.slice(0, 14) + "..."}
         </abbr>
       </td>
       <td id="width-eme-num">
-        <abbr title={ele.emergencyContactNumber}>
-          {ele.emergencyContactNumber.length < 17
-            ? ele.emergencyContactNumber
-            : ele.emergencyContactNumber.slice(0, 14) + "..."}
+        <abbr title={ele.emergency_contact_number}>
+          {ele.emergency_contact_number.length < 17
+            ? ele.emergency_contact_number
+            : ele.emergency_contact_number.slice(0, 14) + "..."}
         </abbr>
       </td>
       <td id="width-personal-mail">
-        <abbr title={ele.personalEmail}>
-          {ele.personalEmail.length < 14
-            ? ele.personalEmail
-            : ele.personalEmail.slice(0, 11) + "..."}
+        <abbr title={ele.email}>
+          {ele.email.length < 14 ? ele.email : ele.email.slice(0, 11) + "..."}
         </abbr>
       </td>
-      <td id="width-company-mail">
-        <abbr title={ele.companyEmail}>
-          {ele.companyEmail.length < 14
-            ? ele.companyEmail
-            : ele.companyEmail.slice(0, 11) + "..."}
-        </abbr>
-      </td>
+
       <td id="width-aathar">
-        <abbr title={ele.aadharNumber}>
-          {ele.aadharNumber.length < 15
-            ? ele.aadharNumber
-            : ele.aadharNumber.slice(0, 11) + "..."}
+        <abbr title={ele.aadhar_number}>
+          {ele.aadhar_number.length < 15
+            ? ele.aadhar_number
+            : ele.aadhar_number.slice(0, 11) + "..."}
         </abbr>
       </td>
       <td id="width-pan">
-        <abbr title={ele.panNumber}>
-          {ele.panNumber.length < 14
-            ? ele.panNumber
-            : ele.panNumber.slice(0, 11) + "..."}
+        <abbr title={ele.pan_number}>
+          {ele.pan_number.length < 14
+            ? ele.pan_number
+            : ele.pan_number.slice(0, 11) + "..."}
         </abbr>
       </td>
+      <td>{ele.status}</td>
       <td id="width-address">
-        <abbr title={ele.currentAddress}>
-          {ele.currentAddress.length < 34
-            ? ele.currentAddress
-            : ele.currentAddress.slice(0, 29) + "..."}
+        <abbr title={ele.current_address}>
+          {ele.current_address.length < 34
+            ? ele.current_address
+            : ele.current_address.slice(0, 29) + "..."}
         </abbr>
       </td>
-      <td id="width-address">
-        <abbr title={ele.currentAddress}>
-          {ele.currentAddress.length < 34
-            ? ele.currentAddress
-            : ele.currentAddress.slice(0, 29) + "..."}
-        </abbr>
-      </td>
+
       <td id="width-qualification">
-        <abbr title={ele.highestQualification}>
-          {ele.highestQualification.length < 18
-            ? ele.highestQualification
-            : ele.highestQualification.slice(0, 15) + "..."}
+        <abbr title={ele.highest_qualification}>
+          {ele.highest_qualification.length < 18
+            ? ele.highest_qualification
+            : ele.highest_qualification.slice(0, 15) + "..."}
         </abbr>
       </td>
       <td id="width-pre-employee">
-        <abbr title={ele.previousEmployer}>
-          {ele.previousEmployer.length < 18
-            ? ele.previousEmployer
-            : ele.previousEmployer.slice(0, 15) + "..."}
+        <abbr title={ele.previous_employer}>
+          {ele.previous_employer.length < 18
+            ? ele.previous_employer
+            : ele.previous_employer.slice(0, 15) + "..."}
         </abbr>
       </td>
       <td id="width-experience">
-        <abbr title={ele.totalExperience}>
-          {ele.totalExperience.length < 18
-            ? ele.totalExperience
-            : ele.totalExperience.slice(0, 15) + "..."}
+        <abbr title={ele.total_experience_year}>
+          {ele.total_experience_year.length < 18
+            ? ele.total_experience_year
+            : ele.total_experience_year.slice(0, 15) + "..."}
         </abbr>
       </td>
       <td id="width-relative-experience">
-        <abbr title={ele.relevantExperience}>
-          {ele.relevantExperience.length < 18
-            ? ele.relevantExperience
-            : ele.relevantExperience.slice(0, 15) + "..."}
+        <abbr title={ele.relevant_experience_year}>
+          {ele.relevant_experience_year.length < 18
+            ? ele.relevant_experience_year
+            : ele.relevant_experience_year.slice(0, 15) + "..."}
         </abbr>
       </td>
-      <td>{ele.maritalStatus}</td>
-      <td>{ele.status}</td>
-      <td>{ele.salaryPackage}</td>
-      <td>{ele.basicSalary}</td>
+      <td>{ele.marital_status}</td>
+      <td>{ele.basics}</td>
       <td>{ele.hra}</td>
-      <td id="conveyance">{ele.conveyanceAllowance}</td>
-      <td id="medical">{ele.medicalAllowance}</td>
-      <td>{ele.taxDeductions}</td>
-      <td>{ele.grossSalary}</td>
-      <td>{ele.netSalary}</td>
+      <td id="conveyance">{ele.conveyance_allowance}</td>
+      <td id="medical">{ele.medical_allowance}</td>
+      <td id="medical">{ele.other_allowances}</td>
+      <td>{ele.bonus}</td>
+      <td>{ele.taxes}</td>
+      <td>{ele.pf}</td>
+      <td>{ele.esi}</td>
+      <td>{ele.gross_salary}</td>
+      <td>{ele.net_salary}</td>
       <td>
-        <abbr title={ele.uanNumber}>
-          {ele.uanNumber.length < 14
-            ? ele.uanNumber
-            : ele.uanNumber.slice(0, 12) + "..."}
+        <abbr title={ele.uan_number}>
+          {ele.uan_number.length < 14
+            ? ele.uan_number
+            : ele.uan_number.slice(0, 12) + "..."}
         </abbr>
       </td>
       <td>
-        <abbr title={ele.pfNumber}>
-          {ele.pfNumber.length < 15
-            ? ele.pfNumber
-            : ele.pfNumber.slice(0, 13) + "..."}
+        <abbr title={ele.pf_number}>
+          {ele.pf_number.length < 15
+            ? ele.pf_number
+            : ele.pf_number.slice(0, 13) + "..."}
+        </abbr>
+      </td>
+      <td>
+        <abbr title={ele.bank_name}>
+          {ele.bank_name.length < 14
+            ? ele.bank_name
+            : ele.bank_name.slice(0, 12) + "..."}
+        </abbr>
+      </td>
+      <td>
+        <abbr title={ele.account_number}>
+          {ele.account_number.length < 14
+            ? ele.account_number
+            : ele.account_number.slice(0, 12) + "..."}
+        </abbr>
+      </td>
+      <td>
+        <abbr title={ele.ifsc_code}>
+          {ele.ifsc_code.length < 14
+            ? ele.ifsc_code
+            : ele.ifsc_code.slice(0, 12) + "..."}
         </abbr>
       </td>
       <td>{ele.asset}</td>
       <td>
-        <abbr title={ele.assetType}>
-          {ele.assetType.length < 14
-            ? ele.assetType
-            : ele.assetType.slice(0, 12) + "..."}
+        <abbr title={ele.asset_type}>
+          {ele.asset_type.length < 14
+            ? ele.asset_type
+            : ele.asset_type.slice(0, 12) + "..."}
         </abbr>
       </td>
-      <td id="width-lap-cmy">{ele.laptopCompany}</td>
+      <td id="width-lap-cmy">{ele.laptop_company_name}</td>
       <td>
-        <abbr title={ele.assetId}>
-          {ele.assetId.length < 14
-            ? ele.assetId
-            : ele.assetId.slice(0, 12) + "..."}
+        <abbr title={ele.asset_id}>
+          {ele.asset_id.length < 14
+            ? ele.asset_id
+            : ele.asset_id.slice(0, 12) + "..."}
         </abbr>
       </td>
       <td id="width-edu-doc">
-        {ele.educationDocument !== "" ? "Attached" : "Not attached"}
-      </td>
-      <td>
-        <abbr title={ele.bankName}>
-          {ele.bankName.length < 14
-            ? ele.bankName
-            : ele.bankName.slice(0, 12) + "..."}
-        </abbr>
-      </td>
-      <td>
-        <abbr title={ele.bankAccountNumber}>
-          {ele.bankAccountNumber.length < 14
-            ? ele.bankAccountNumber
-            : ele.bankAccountNumber.slice(0, 12) + "..."}
-        </abbr>
-      </td>
-      <td>
-        <abbr title={ele.ifscCode}>
-          {ele.ifscCode.length < 14
-            ? ele.ifscCode
-            : ele.ifscCode.slice(0, 12) + "..."}
-        </abbr>
+        {ele.upload_documents !== "" ? "Attached" : "Not attached"}
       </td>
     </tr>
   );

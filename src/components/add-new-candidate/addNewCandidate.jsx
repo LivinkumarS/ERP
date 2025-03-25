@@ -37,7 +37,9 @@ export default function addNewCandidate() {
     medical_allowance: "",
     other_allowances: "",
     bonus: "",
-    deductions: "",
+    taxes: "",
+    pf: "",
+    esi: "",
     gross_salary: "",
     net_salary: "",
     uan_number: "",
@@ -70,7 +72,10 @@ export default function addNewCandidate() {
       e.target.id === "other_allowances" ||
       e.target.id === "bonus" ||
       e.target.id === "gross_salary" ||
-      e.target.id === "net_salary"
+      e.target.id === "net_salary" ||
+      e.target.id === "taxes" ||
+      e.target.id === "pf" ||
+      e.target.id === "esi"
     ) {
       return setFormData((prev) => {
         return { ...prev, [e.target.id]: putComma(e.target.value) };
@@ -120,7 +125,9 @@ export default function addNewCandidate() {
       medical_allowance: "",
       other_allowances: "",
       bonus: "",
-      deductions: "",
+      taxes: "",
+      pf: "",
+      esi: "",
       gross_salary: "",
       net_salary: "",
       uan_number: "",
@@ -596,23 +603,74 @@ export default function addNewCandidate() {
                 </div>
               </div>
               <div className="candidate-box">
-                <label htmlFor="deductions">Deductions</label>
-                <select
-                  id="deductions"
-                  name="deductions"
-                  className="candidate-input"
-                  onChange={handleFormChange}
-                  value={formData.deductions}
-                >
-                  <option value="">Select Deductions</option>
-                  <option value="Taxes">Taxes</option>
-                  <option value="PF">PF</option>
-                  <option value="ESI">ESI</option>
-                </select>
+                <label htmlFor="taxes">Taxes</label>
+                <div className="salary-container">
+                  <input
+                    type="text"
+                    id="taxes"
+                    className="salary-input"
+                    name="taxes"
+                    onChange={handleFormChange}
+                    value={formData.taxes}
+                  />
+                  <span className="rupee-symbol">
+                    <svg
+                      className="rupees-logo"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 320 512"
+                    >
+                      <path d="M0 64C0 46.3 14.3 32 32 32l64 0 16 0 176 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-56.2 0c9.6 14.4 16.7 30.6 20.7 48l35.6 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-35.6 0c-13.2 58.3-61.9 103.2-122.2 110.9L274.6 422c14.4 10.3 17.7 30.3 7.4 44.6s-30.3 17.7-44.6 7.4L13.4 314C2.1 306-2.7 291.5 1.5 278.2S18.1 256 32 256l80 0c32.8 0 61-19.7 73.3-48L32 208c-17.7 0-32-14.3-32-32s14.3-32 32-32l153.3 0C173 115.7 144.8 96 112 96L96 96 32 96C14.3 96 0 81.7 0 64z" />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div className="candidate-box">
+                <label htmlFor="pf">PF</label>
+                <div className="salary-container">
+                  <input
+                    type="text"
+                    id="pf"
+                    className="salary-input"
+                    name="pf"
+                    onChange={handleFormChange}
+                    value={formData.pf}
+                  />
+                  <span className="rupee-symbol">
+                    <svg
+                      className="rupees-logo"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 320 512"
+                    >
+                      <path d="M0 64C0 46.3 14.3 32 32 32l64 0 16 0 176 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-56.2 0c9.6 14.4 16.7 30.6 20.7 48l35.6 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-35.6 0c-13.2 58.3-61.9 103.2-122.2 110.9L274.6 422c14.4 10.3 17.7 30.3 7.4 44.6s-30.3 17.7-44.6 7.4L13.4 314C2.1 306-2.7 291.5 1.5 278.2S18.1 256 32 256l80 0c32.8 0 61-19.7 73.3-48L32 208c-17.7 0-32-14.3-32-32s14.3-32 32-32l153.3 0C173 115.7 144.8 96 112 96L96 96 32 96C14.3 96 0 81.7 0 64z" />
+                    </svg>
+                  </span>
+                </div>
               </div>
             </div>
 
             <div className="general-right">
+              <div className="candidate-box">
+                <label htmlFor="esi">ESI</label>
+                <div className="salary-container">
+                  <input
+                    type="text"
+                    id="esi"
+                    className="salary-input"
+                    name="esi"
+                    onChange={handleFormChange}
+                    value={formData.esi}
+                  />
+                  <span className="rupee-symbol">
+                    <svg
+                      className="rupees-logo"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 320 512"
+                    >
+                      <path d="M0 64C0 46.3 14.3 32 32 32l64 0 16 0 176 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-56.2 0c9.6 14.4 16.7 30.6 20.7 48l35.6 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-35.6 0c-13.2 58.3-61.9 103.2-122.2 110.9L274.6 422c14.4 10.3 17.7 30.3 7.4 44.6s-30.3 17.7-44.6 7.4L13.4 314C2.1 306-2.7 291.5 1.5 278.2S18.1 256 32 256l80 0c32.8 0 61-19.7 73.3-48L32 208c-17.7 0-32-14.3-32-32s14.3-32 32-32l153.3 0C173 115.7 144.8 96 112 96L96 96 32 96C14.3 96 0 81.7 0 64z" />
+                    </svg>
+                  </span>
+                </div>
+              </div>
               <div className="candidate-box">
                 <label htmlFor="gross_salary">Gross Salary</label>
                 <div className="salary-container">
@@ -810,7 +868,7 @@ export default function addNewCandidate() {
         </div>
         <div className="candidate-submit-container">
           <button type="submit" className="candidate-submit-btn">
-            Submit
+            Save
           </button>
         </div>
       </form>

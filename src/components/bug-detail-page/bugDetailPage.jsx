@@ -95,6 +95,10 @@ export default function bugDetailPage() {
   };
 
   function handleSendComment() {
+    if (commentText === "") {
+      return;
+    }
+
     setComments((prev) => {
       prev.push({
         commentId: crypto.randomUUID(),
@@ -132,7 +136,6 @@ export default function bugDetailPage() {
         timestamp: new Date().toISOString(),
       });
 
-
       return prev;
     });
 
@@ -153,8 +156,6 @@ export default function bugDetailPage() {
 
   function handleDeleteReplyComment(cmtId, reId) {
     setComments((prev) => {
-
-      
       return prev.map((comment) => {
         if (comment.commentId === cmtId) {
           return {
@@ -166,7 +167,6 @@ export default function bugDetailPage() {
       });
     });
   }
-  
 
   return (
     <div className="bugDetailPage">

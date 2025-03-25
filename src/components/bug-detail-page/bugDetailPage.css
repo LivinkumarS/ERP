@@ -144,6 +144,16 @@
 .chat-cointainer > .chat-box > .error-title {
   margin-bottom: 20px;
 }
+/* chat-box */
+
+.comments-container {
+  min-height: auto;
+  max-height: 450px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: gray transparent;
+}
 
 /* Single Comment */
 .comment {
